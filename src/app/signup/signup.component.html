@@ -26,60 +26,61 @@
             <div class="col-sm-6 p-1">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label inlabel">First Name</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="text" [(ngModel)]="firstname" name="firstname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               </div>
             </div>
             <div class="col-sm-6 p-1">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label inlabel">Last Name</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="text" [(ngModel)]="lastname" name="lastname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               </div>
             </div>
 
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label inlabel">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="email" [(ngModel)]="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label inlabel">Phone</label>
-            <input type="text" class="form-control" ng2TelInput />
+            <input type="text" class="form-control" ng2TelInput [ng2TelInputOptions]="{initialCountry: 'gh'}"
+              (hasError)="hasError($event)" (ng2TelOutput)="getNumber($event)" (change)="getNumber($event)" />
           </div>
           <div class="d-flex">
             <div class="col-sm-6 p-1">
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label inlabel">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1"
+                <input type="password" [(ngModel)]="password" name="password" class="form-control" id="exampleInputPassword1"
                   placeholder="Password 8. main characters">
-                  
+
                 <div id="emailHelp" class="form-text hint">this is a hint text to help users</div>
               </div>
             </div>
             <div class="col-sm-6 p-1">
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label inlabel">Confirm Password</label>
-                <input type="password" class="form-control placehold" id="exampleInputPassword1"
+                <input type="password" [(ngModel)]="confirm_password" name="confirm_passworrd" class="form-control placehold" id="exampleInputPassword1"
                   placeholder="Password 8. main characters">
-                  
+
                 <div id="emailHelp" class="form-text hint">this is a hint text to help users</div>
               </div>
             </div>
           </div>
-         
-          <a  class="form-label code">Get a code?</a>
+
+          <a class="form-label code">Get a code?</a>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <input class="form-check-input" [(ngModel)]="code" name="code" type="checkbox" value="" id="flexCheckChecked" checked>
             <label class="form-check-label terms" for="flexCheckChecked">
               I have read, understood and I agree to Adwasu’s Privacy Policy, and Terms and conditions.
             </label>
           </div>
-          <!-- <button type="submit" class="but border-0 bg-muted">Button CTA</button> -->
-          <button type="button" class="but btn btn-lg btn-block border-0 bg-muted w-100">Button CTA</button>
+
+
+          <button type="button" class="but btn btn-lg btn-block border-0 bg-muted w-100" (click)="onSubmit()">Button CTA</button>
 
         </form>
-  
+
+      </div>
     </div>
+
   </div>
-
-</div>
-

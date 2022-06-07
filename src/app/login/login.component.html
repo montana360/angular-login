@@ -21,20 +21,20 @@
         <form>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="email" [(ngModel)]="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1"
+            <input type="password"  [(ngModel)]="password" name="password" class="form-control" id="exampleInputPassword1"
               placeholder="Password 8. main characters">
-              
+
             </div>
             <div id="emailHelp" class="form-text">this is a hint text to help users</div>
           <div class="form-group">
             <button type="button" class="btn btn-link">Forget Password</button>
           </div>
           <!-- <button type="submit" class="but border-0 bg-muted">Button CTA</button> -->
-          <button type="button" class="but btn btn-lg btn-block border-0 bg-muted w-100">Button CTA</button>
+          <button type="button" class="but btn btn-lg btn-block border-0 bg-muted w-100"  (click)="onSubmit()">Button CTA</button>
 
         </form>
       </div>
