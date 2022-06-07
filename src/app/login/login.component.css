@@ -1,0 +1,43 @@
+.but{
+    /* // box-sizing: border-box; */
+
+/* Auto layout */
+justify-content: center;
+align-items: center;
+padding: 16px 28px;
+gap: 8px;
+color: #94A3B8;
+
+width: 487px;
+height: 60px;
+
+/* Grey/200 */
+
+background: linear-gradient(0deg, #E2E8F0, #E2E8F0), linear-gradient(270deg, rgba(255, 255, 255, 0.2) 15.61%, rgba(0, 0, 0, 0.2) 15.62%, rgba(0, 0, 0, 0.2) 38.53%, rgba(255, 255, 255, 0.2) 38.54%, rgba(255, 255, 255, 0.2) 60.93%, rgba(0, 0, 0, 0.2) 60.94%, rgba(0, 0, 0, 0.2) 82.8%, rgba(255, 255, 255, 0.2) 82.81%);
+/* Shadow/xs */
+/* // box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05); */
+border-radius: 4px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+}
+
+.head1{
+font-weight: 500;
+font-size: 38px;
+line-height: 60px;
+color: #94A3B8;
+}
+
+.rectangle{
+width: 100%;
+height: 225px;
+background: linear-gradient(0deg, #F1F5F9, #F1F5F9), linear-gradient(270deg, rgba(255, 255, 255, 0.2) 15.61%, rgba(0, 0, 0, 0.2) 15.62%, rgba(0, 0, 0, 0.2) 38.53%, rgba(255, 255, 255, 0.2) 38.54%, rgba(255, 255, 255, 0.2) 60.93%, rgba(0, 0, 0, 0.2) 60.94%, rgba(0, 0, 0, 0.2) 82.8%, rgba(255, 255, 255, 0.2) 82.81%);
+border-radius: 4px;
+}
+
+.wrapper{
+    min-height: 230px;
+}
