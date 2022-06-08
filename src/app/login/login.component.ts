@@ -33,9 +33,11 @@ export class LoginComponent implements OnInit {
       if (userFound.length > 0) {
         alert('User found');
         console.log({ User: userFound[0] });
+      } else {
+        alert('Wrong credentials, please check the email and password');
       }
     } else {
-      alert('User account not found');
+      alert('No user with this credentials found. Please create an account');
     }
   }
 }
